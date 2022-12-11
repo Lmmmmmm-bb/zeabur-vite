@@ -1,0 +1,52 @@
+{
+  "name": "vite-vue-starter",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@7.12.2",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vue-tsc --noEmit && vite build",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "preview": "vite preview",
+    "lint:check": "prettier --check .",
+    "lint:format": "prettier --write .",
+    "lint:fix": "eslint ./src --ext .ts,.js,.vue --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.45.26",
+    "vue": "^3.2.40",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@iconify-json/carbon": "^1.1.8",
+    "@types/node": "^18.7.23",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vitest/ui": "^0.23.4",
+    "@vue/runtime-core": "^3.2.40",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.5.1",
+    "husky": "^8.0.1",
+    "jsdom": "^20.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "unocss": "^0.45.26",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.8",
+    "vite": "^3.1.4",
+    "vitest": "^0.23.4",
+    "vue-tsc": "^0.40.13"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write . --ignore-unknown",
+    "*.{js,ts,tsx,vue}": "eslint ./src --ext .ts,.js,.vue --fix"
+  }
+}
